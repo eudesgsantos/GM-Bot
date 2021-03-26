@@ -19,7 +19,7 @@ client.on('message', async (message) => {
     if (message.content.startsWith(PREFIX)) {
         command(message,Discord,client);
     }
-    kick_emoji(message);
+    //kick_emoji(message);
     kick_img(message);
 });
 
