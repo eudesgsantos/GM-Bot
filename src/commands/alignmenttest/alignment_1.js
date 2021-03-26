@@ -3,8 +3,8 @@ const { MessageEmbed, Client, MessageReaction} = require('discord.js');
 const alignment_2 = require('./alignment_2');
 
 module.exports = async function alignment_1(message,Discord,client){
-    const emojiD20 = "<:d20:804162082077540373>";
-    const emojiD20Name = "d20";
+    const emoji = "<a:Ninobye:825114307490086922>";
+    const emojiName = "Ninobye";
     const timeLimit = 60000;
     const newEmbed = new MessageEmbed()
     .setColor('#ffffff')
@@ -14,10 +14,10 @@ module.exports = async function alignment_1(message,Discord,client){
     .setFooter(message.author.username,message.author.displayAvatarURL({ format: 'png' }));
 
     let Embed = await message.channel.send(newEmbed);
-    await Embed.react(emojiD20);
+    await Embed.react(emoji);
 
     const filter = (reaction, user) => {
-        return reaction.emoji.name === emojiD20Name && user.id === message.author.id;
+        return reaction.emoji.name === emojiName && user.id === message.author.id;
     };
 
     const collector = Embed.createReactionCollector(filter, { max: 1, time:timeLimit });
