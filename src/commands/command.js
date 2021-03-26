@@ -7,10 +7,7 @@ const talk = require('./talk');
 const roll = require('./D&D/roll');
 const alignment_1 = require('./alignmenttest/alignment_1');
 
-const channelID = '803419900508504106'
-
 module.exports = async function command(message,Discord,client,dialogflow,uuid) {
-    if (message.channel.id != channelID) return;
     const [CMD_NAME, ...args] = message.content
             .trim()
             .substring(PREFIX.length)
