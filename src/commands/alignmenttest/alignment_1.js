@@ -13,7 +13,7 @@ module.exports = async function alignment_1(message,Discord,client){
     .setFooter(message.author.username,message.author.displayAvatarURL({ format: 'png' }));
 
     let Embed = await message.channel.send(newEmbed);
-    await Embed.react(emoji);
+    await Embed.react(emojiID);
 
     const filter = (reaction, user) => {
         return reaction.emoji.id === emojiId && user.id === message.author.id;
