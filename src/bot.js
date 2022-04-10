@@ -20,7 +20,7 @@ client.on('message', async (message) => {
         command(message,Discord,client);
     }
     //kick_emoji(message);
-    kick_img(message);
+    //kick_img(message);
 });
 
 client.login(process.env.DISCORD_BOT_TOKEN);
