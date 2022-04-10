@@ -3,8 +3,8 @@ const { MessageEmbed, Client, MessageReaction} = require('discord.js');
 const alignment_2 = require('./alignment_2');
 
 module.exports = async function alignment_1(message,Discord,client){
-    const emoji = "<:nino:825114172751609928>";
-    const emojiId = "825114172751609928"
+    const emoji = "🙂";
+    const emojiId = "🙂";
     const timeLimit = 60000;
     const newEmbed = new MessageEmbed()
     .setColor('#ffffff')
@@ -17,7 +17,7 @@ module.exports = async function alignment_1(message,Discord,client){
     await Embed.react(emoji);
 
     const filter = (reaction, user) => {
-        return reaction.emoji.id === emojiId && user.id === message.author.id;
+        return reaction.emoji.name === emojiId && user.id === message.author.id;
     };
 
     const collector = Embed.createReactionCollector(filter, { max: 1, time:timeLimit });
